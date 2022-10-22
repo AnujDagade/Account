@@ -1,0 +1,7 @@
+com.example.accountapp.test.app-androidTest-0 /workspace/Account/app/build/generated/res/resValues/androidTest/debug
+com.example.accountapp.test.app-androidTest-1 /workspace/Account/app/build/generated/res/rs/androidTest/debug
+com.example.accountapp.test.app-mergeDebugAndroidTestResources-2 /workspace/Account/app/build/intermediates/incremental/debugAndroidTest/mergeDebugAndroidTestResources/merged.dir
+com.example.accountapp.test.app-mergeDebugAndroidTestResources-3 /workspace/Account/app/build/intermediates/incremental/debugAndroidTest/mergeDebugAndroidTestResources/stripped.dir
+com.example.accountapp.test.app-merged_res-4 /workspace/Account/app/build/intermediates/merged_res/debugAndroidTest
+com.example.accountapp.test.app-androidTest-5 /workspace/Account/app/src/androidTest/res
+com.example.accountapp.test.app-androidTestDebug-6 /workspace/Account/app/src/androidTestDebug/res

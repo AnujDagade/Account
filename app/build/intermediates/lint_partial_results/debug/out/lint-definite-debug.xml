@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<incidents format="6" by="lint 7.2.0" type="incidents">
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Process...&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_main.xml"
+            line="15"
+            column="9"
+            startOffset="632"
+            endLine="15"
+            endColumn="34"
+            endOffset="657"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Output Will Appear Here...&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_main.xml"
+            line="38"
+            column="13"
+            startOffset="1501"
+            endLine="38"
+            endColumn="54"
+            endOffset="1542"/>
+    </incident>
+
+    <incident
+        id="SetTextI18n"
+        severity="warning"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders.">
+        <location
+            file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/accountapp/ui/MainActivity.java"
+            line="86"
+            column="25"
+            startOffset="1958"
+            endLine="86"
+            endColumn="56"
+            endOffset="1989"/>
+    </incident>
+
+</incidents>
