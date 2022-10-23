@@ -19,26 +19,29 @@ public class Account {
      */
     final OutputInterface mOut;
 
-    /**
-     * Name of the account holder.
-     */
-    String name;
 
-    /**
-     * Number of the account.
-     */
-    int number;
-
-    /**
-     * Current balance in the account.
-     */
-    double balance;
+    private String name;
+    private int number;
+    private double balance;
 
     /**
      * Constructor initializes the field
      */
     public Account(OutputInterface out) {
         mOut = out;
+    }
+
+    public Account( OutputInterface out,String name, int number) {
+        mOut = out;
+        this.name = name;
+        this.number = number;
+    }
+
+    public Account(OutputInterface out, String name, int number, double balance) {
+        mOut = out;
+        this.name = name;
+        this.number = number;
+        this.balance = balance;
     }
 
     // Important note on constructors...
@@ -57,20 +60,60 @@ public class Account {
      * Withdraw @a amount from the account.  Prints "Insufficient
      * Funds" if there's not enough money in the account.
      */
-    public void withdrawal(double amount) {
-        if (balance > amount)
+    public boolean withdrawal(double amount) {
+        if (balance > amount) {
             balance -= amount;
-        else 
-            mOut.println("Insufficient Funds");
+            return true;
+        }
+        else {
+            //mOut.println("Insufficient Funds");
+            return false;
+        }
     }
 
     /**
      * Display the current @a amount in the account.
      */
     public void displayBalance() {
-        mOut.println("The balance on account " 
+        mOut.println("The balance on account " +name+": "
                      + number
                      + " is " 
                      + balance);
+    }
+
+    //Getters
+    public String getName() {
+        return name;
+    }
+
+    public int getNumber() {
+        return  number;
+    }
+
+    public double getBalance() {
+        return balance;
+    }
+
+    //Setters
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setNumber(int number) {
+        this.number = number;
+    }
+
+    public  String toString(){
+        return ("Account holder: "+this.getName()+"\n"+ "Number: " + this.getNumber());
+    }
+
+    public boolean equals(Object other) {
+        if(other instanceof Account) {
+            Account acc = (Account) other;
+            return number == acc.number;
+        } else {
+            return false;
+        }
     }
 }

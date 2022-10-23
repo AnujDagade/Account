@@ -46,16 +46,19 @@ public class Logic
      */
     @Override
     public void process() {
-        Account acct1 = new Account(mOut);
-        Account acct2 = new Account(mOut);
 
-        acct1.name = "Bill";
-        acct1.number = 738924;
-        acct1.balance = 231.48;
+        //Account acct2 = new Account(mOut);
 
-        acct2.name = "Sue";
-        acct2.number = 894730;
-        acct2.balance = 0;
+        Account acct1 = new Account(mOut,"Anuj",1234);
+        Account acct2 = new Account(mOut, "Sue", 54321, 0);
+
+//        acct1.setName("Anuj");
+//        acct1.setNumber(738924);
+        acct1.deposit(231.48);
+
+        acct2.setName("Sue");
+        acct2.setNumber(894730);
+        acct2.deposit(0);
 
         acct1.displayBalance();
         acct1.deposit(89.00);
@@ -63,5 +66,7 @@ public class Logic
 
         acct2.displayBalance();
         acct2.withdrawal(300);
+
+        mOut.println(acct1);
     }
 }
